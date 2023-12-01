@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<style>
+* {
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+body{
+    background-color: #12388b; 
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+}
+.column {
+    width: 100%;
+     padding: 0.5em 0;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    color: #013b00;
+}
+.card{
+    box-shadow: 0 0 0.2em rgba(11, 195, 219, 0.15);
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #37bd1c;
+}
+.card .img-container {
+width: 8em;
+height: 8em;
+background-color: #2aa5ad;
+
+border-radius: 52%;
+margin: 0 auto 2em auto;
+}
+.card img{
+    width: 100%;
+    border-radius: 50%;
+}
+.card h3 {
+    font-weight: 500;
+}
+.card p {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0.5em 0 2em 0;
+    letter-spacing: 2px;
+}
+.icons {
+width: 50%;
+min-width: 180px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+}
+.card a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+}
+.card:hover {
+    background: linear-gradient(rgb(23, 184, 37), #112fb1);
+    color: #8567F7;
+    transform: scale(1.15);
+}
+@media screen and (min-width: 768px) {
+    section {
+        padding 1em 7em;
+    }
+}
+@media screen and (min-width: 992px) {
+    section {
+        padding: 1em;
+    }
+    .card{
+        padding: 5em 1;
+    }
+    .column {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+</style>
+<html>
+    <head>
+        <title> ACTION</title>
+        <!---Font Awesome--->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!---Google Font--->
+        <link href="">
+
+        <!---Stylesheet--->
+        <link rel="stylesheet" href="style4.css">
+    </head>
+    <body>
+        <section>
+            <div class="row">
+                <h1>ACTION</h1>
+            </div>
+            <div class="row">
+
+                <div class="column">
+                    <div class="card">
+                        <div class="img-container">
+                            <img src="C:\Users\user\Downloads\MISSION1.jpg" width="140px" height="140">
+                        </div>
+                        <h3>MISSION</h3>
+                        <p>The Mission targets installing 100 GW grid-connected solar power plants by the year 2023.</p>
+                        <div class="icons">
+                            
+                        </div>
+                    </div>
+                  </div>
+                  
+                    <div class="column">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="C:\Users\user\Downloads\VISION1.jpg"  width="140px" height="140">
+                            </div>
+                            <h3>VISION</h3>
+                            <p>To promote the installation of power plants based on renewable energy sources for Energy Security.</p>
+                            <div class="icons">
+                               
+                            </div>
+                        </div>
+             </div>
+             
+                <div class="column">
+                    <div class="card">
+                        <div class="img-container">
+                            <img src="C:\Users\user\Downloads\TARGET1.jpg" width="140px" height="140">
+                        </div>
+                        <h3>TARGET</h3>
+                        <p>India has set a target to reduce the carbon intensity of the nation's economy by less than 45% by the end of the decade, achieve 50% cumulative electric power installed by 2030</p>
+                        <div class="icons">
+                            
+                        </div>
+                    </div>
+         </div>  
+            </div>
+        </section>
+
+
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Latest Login form Design using html and css in hindi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		*{padding: 0; margin: 0; box-sizing: border-box;}
+		header{
+			width:100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{
+			width: 400px;
+			height:500px;
+			background:linear-gradient(180deg,#3498db,white 40%);
+			position: relative;
+			padding:2rem;
+			
+
+		}
+		.wrapper{
+			position: absolute;
+			width:80%;
+			height:55%;
+			background:white;
+			border-radius: 8px;
+			box-shadow: 2px 3px 15px grey;
+			padding: 5px;
+			font-family: 'Poppins', sans-serif;
+			text-align: center;
+		}
+		#pic{
+			border-radius: 50%;
+			margin-bottom: 10px;
+		}
+		form{ padding-top: 25px;}
+		form span{ position: relative; padding-left: 15px; }
+		form span button{
+			background-color: #3498db ;
+		}
+		form span i{
+			position: absolute;
+			padding-left: 8px;
+			top: 2px;
+
+		}
+		form span input{
+			width:80%;
+			padding: 10px 30px;
+			border: 1px solid #3498db;
+			
+		}
+		#submit{ background:#3498db;
+		 color: white;
+		  padding: 10px 20px;
+		  box-shadow: 2px 3px 5px grey;
+		  border-radius: 8px;
+		  cursor: pointer;
+		 }
+		 #submit:hover{
+		 	background: transparent;
+		 	border: 1px solid #3498db;
+		 	color: black;
+		 	transition: 0.4s ease-in-out;
+		 	
+		 }
+		 #msg{
+			color: #61b752;
+			/* margin-top: -5px; */
+			display: block;
+		 }
+	</style>
+</head>
+<body bgcolor="#d279a6">
+<header>
+	<div class="container">
+		<img src="user.jpg" id="pic">
+		<div class="wrapper">
+			<h2>Login Here <i class="fa fa-hand-o-down"></i> </h2>
+			<form name="submit-to-google-sheet">
+			<span>
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+				<input type="email" name="email" placeholder="Email">
+			</span>
+				<br> <br>
+			<span>
+				<i class="fa fa-lock" aria-hidden="true"></i>
+				<input type="password" name="password" placeholder="Password">
+			</span>
+			<br><br>
+			<!-- <button type="submit" name="submit">submit</button> -->
+			<!-- <input type="submit" name="submit" value="Submit"> -->
+			<button type="submit" name="submit"><i class="fa fa-share" aria-hidden="true" id="submit"></i> </button>
+			</form>
+			<span id="msg" ></span>
+		</div>
+	</div>
+</header>
+</body>
+
+  
+  <script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbz9K56YHaDSLFApR6ZUhrp7LcNHG5TCAkXbfh1Tx7fHyBPAXd1nYc7NhCDEWyWBFfzMog/exec'
+	const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+
+
+	form.addEventListener('submit', e => {
+	  e.preventDefault()
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response => {
+			msg.innerHTML="Message Sent Successfully"
+			setTimeout(function(){
+				msg.innerHTML=""
+			},3000)
+			form.reset()
+		})
+		.catch(error => console.error('Error!', error.message))
+	})
+  </script>
+</html>
